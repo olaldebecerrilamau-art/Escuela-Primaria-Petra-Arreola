@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Escolar | Primaria Petra Arreola</title>
+    <style>
+        html { scroll-behavior: smooth; }
+        :root {
+            --primario: #004080;
+            --secundario: #f1f4f8;
+            --texto: #2c3e50;
+            --blanco: #ffffff;
+            --rojo-sep: #952233;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            color: var(--texto);
+            line-height: 1.6;
+            background-color: #fff;
+        }
+
+        /* --- NAVEGACIÓN CON LOGO --- */
+        nav {
+            background: var(--primario);
+            color: var(--blanco);
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-img {
+            height: 45px; /* Tamaño ideal para celular y compu */
+            width: auto;
+            border-radius: 5px;
+            background: white;
+            padding: 2px;
+        }
+
+        .logo-texto {
+            font-weight: bold;
+            font-size: 1rem;
+            line-height: 1.2;
+        }
+
+        nav ul { list-style: none; display: flex; margin: 0; padding: 0; }
+        nav ul li { margin-left: 20px; }
+        nav ul li a { color: white; text-decoration: none; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; }
+
+        /* --- RESTO DEL DISEÑO --- */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://lh3.googleusercontent.com/gps-cs-s/AHVAwerGhxuKkkxsd8JXnnNuQNvotlN7Osqynhsqs3nzutPT68caYgmApU_oBRwCUtru9Wl3R5Ra8irYlzBpvmMYnf3GXmE24-MiKXx-efDTPs7ZJZS-zxt-xYKwP860Z9udQ4opHEav=s1360-w1360-h1020-rw');
+            background-size: cover;
+            background-position: center;
+            height: 380px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+        section { padding: 60px 0; border-bottom: 1px solid #eee; }
+        h2 { color: var(--primario); border-left: 5px solid var(--primario); padding-left: 15px; margin-bottom: 30px; }
+
+        .identidad-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card-identidad { background: var(--secundario); padding: 25px; border-radius: 12px; border-top: 5px solid var(--primario); }
+        .valores-tag { display: inline-block; background: var(--primario); color: white; padding: 5px 15px; border-radius: 20px; margin: 5px; font-size: 0.9rem; }
+
+        .organigrama { display: flex; flex-direction: column; align-items: center; gap: 15px; }
+        .puesto { background: white; border: 2px solid var(--primario); padding: 12px; border-radius: 8px; min-width: 160px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .conector { width: 2px; height: 15px; background: var(--primario); }
+        .nivel { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; }
+
+        .galeria-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .galeria-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; }
+        .galeria-img { width: 100%; height: 160px; object-fit: cover; }
+        .galeria-info { padding: 10px; font-weight: bold; color: var(--primario); }
+
+        .calendario-box { background: var(--secundario); border-radius: 15px; padding: 25px; }
+        .fecha-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dashed #ccc; }
+        
+        .mapa-card { display: block; text-decoration: none; border-radius: 20px; overflow: hidden; border: 2px solid #ddd; }
+        .mapa-img { width: 100%; height: 250px; object-fit: cover; display: block; }
+        .mapa-info { padding: 20px; background: var(--primario); color: white; text-align: center; }
+
+        footer { background: #1a1a1a; color: #bbb; padding: 40px; text-align: center; }
+
+        /* Ajuste para móviles */
+        @media (max-width: 600px) {
+            nav { flex-direction: column; gap: 10px; }
+            nav ul li { margin: 0 10px; }
+            .hero h1 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-container">
+            <img src="file:///C:/Users/ThinkPad/Downloads/PRMARIA.jpg" alt="Logo Petra Arreola" class="logo-img">
+            <div class="logo-texto">Primaria<br>Petra Arreola</div>
+        </div>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros">Identidad</a></li>
+            <li><a href="#organigrama">Equipo</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#calendario">Calendario</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" id="inicio">
+        <h1>Escuela Primaria "Profa. Ma. Petra Arreola Echeverría"</h1>
+        <p>Inclusión y excelencia educativa para nuestra comunidad</p>
+    </header>
+
+    <div class="container">
+        
+        <section id="nosotros">
+            <h2>Nuestra Identidad</h2>
+            <div class="identidad-grid">
+                <div class="card-identidad">
+                    <h3>Misión</h3>
+                    <p>Formación democrática, humanista e inclusiva para el desarrollo de competencias de excelencia.</p>
+                </div>
+                <div class="card-identidad">
+                    <h3>Visión</h3>
+                    <p>Ser una institución líder que transforme positivamente la vida de nuestros alumnos y su entorno.</p>
+                </div>
+                <div class="card-identidad">
+                    <h3>Valores</h3>
+                    <span class="valores-tag">Solidaridad</span>
+                    <span class="valores-tag">Perseverancia</span>
+                    <span class="valores-tag">Trabajo en equipo</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="organigrama">
+            <h2>Organigrama Escolar</h2>
+            <div class="organigrama">
+                <div class="puesto"><strong>Dirección</strong><span>Dirección General</span></div>
+                <div class="conector"></div>
+                <div class="nivel">
+                    <div class="puesto"><strong>Subdirección</strong><span>Administración</span></div>
+                    <div class="puesto"><strong>Consejo Técnico</strong><span>Académico</span></div>
+                </div>
+                <div class="conector"></div>
+                <div class="nivel">
+                    <div class="puesto"><strong>Docentes</strong><span>1° a 6° Grado</span></div>
+                    <div class="puesto"><strong>USAER</strong><span>Inclusión</span></div>
+                    <div class="puesto"><strong>Servicios</strong><span>Apoyo</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria">
+            <h2>Galería</h2>
+            <div class="galeria-grid">
+                <div class="galeria-card"><img src="file:///C:/Users/ThinkPad/Downloads/ddddd.jpeg" class="galeria-img"><div class="galeria-info">Instalaciones</div></div>
+                <div class="galeria-card"><img src="file:///C:/Users/ThinkPad/Downloads/cccc.jpeg" class="galeria-img"><div class="galeria-info">Eventos</div></div>
+                <div class="galeria-card"><img src="file:///C:/Users/ThinkPad/Downloads/aaaaaa.jpeg" class="galeria-img"><div class="galeria-info">Áreas Verdes</div></div>
+            </div>
+        </section>
+
+ <section id="calendario">
+            <h2>Calendario Escolar 2025-2026</h2>
+            <div class="calendario-box">
+                <div class="fecha-item"><span>Suspensión: Natalicio Benito Juárez</span><span class="fecha-label">16 de marzo</span></div>
+                <div class="fecha-item"><span>Vacaciones de Semana Santa</span><span class="fecha-label">30 de marzo - 10 de abril</span></div>
+                <div class="fecha-item"><span>Suspensión: Día del Maestro</span><span class="fecha-label">15 de mayo</span></div>
+                <div class="fecha-item"><span>Fin del Ciclo Escolar</span><span class="fecha-label">15 de julio</span></div>
+            </div>
+        </section>
+
+        <section id="ubicacion">
+            <h2>¿Dónde estamos?</h2>
+            <a href="https://maps.app.goo.gl/aWd3LdcVgFNysQ829" target="_blank" class="mapa-card">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepRQUwaeV4YY12VeHDWTu-RZ9833jWmsAl_grLNAZVlm3KP0lZJs20_0VJP5MUmLiPfCsZ_xSPsYbWeI7ojM6Q3iYIZobFFhCUxZzVwQgCm33GSre2T4XL-Q5sV4wavNPQO4K7nyA=s1360-w1360-h1020-rw" class="mapa-img" alt="Mapa">
+                <div class="mapa-info">
+                    <h3>📍 Toca aquí para ver en Google Maps</h3>
+                    <p>Héroes Chalco, Edo. de México.</p>
+                </div>
+            </a>
+        </section>
+
+    </div>
+
+    <footer>
+        © 2026 Escuela Primaria Profa. Ma. Petra Arreola Echeverría. <br>
+        <small>Comprometidos con el futuro de Chalco.</small>
+    </footer>
+
+</body>
+</html>
